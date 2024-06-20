@@ -19,9 +19,7 @@ public class BaShenAn implements Player {
         this.height = height;
     }
 
-    /************************************************************************
-     * 按下某个键，增加相应的方向
-     ************************************************************************/
+    //按下某个键，增加相应的方向
     public void addDirection(KeyEvent e){
         switch (e.getKeyCode()) {
             case KeyEvent.VK_S:
@@ -58,9 +56,7 @@ public class BaShenAn implements Player {
     }
 
 
-    /************************************************************************
-     * 按下某个键，取消相应的方向
-     ************************************************************************/
+    //按下某个键，取消相应的方向
     public void minusDirection(KeyEvent e){
         clean();
         switch (e.getKeyCode()) {
@@ -92,9 +88,7 @@ public class BaShenAn implements Player {
     }
 
 
-    /************************************************************************
-     * 站立
-     ************************************************************************/
+    //站立
     static Image[] standImgs = new Image[18];
     static int standCount;
     static {
@@ -123,9 +117,7 @@ public class BaShenAn implements Player {
         }
     }
 
-    /************************************************************************
-     * 下蹲
-     ************************************************************************/
+    //下蹲
     static Image[] downImgs = new Image[6];
     static int downCount;
     static Image[] downKImgs = new Image[11];
@@ -181,9 +173,7 @@ public class BaShenAn implements Player {
     }
 
 
-    /************************************************************************
-     * 后退
-     ************************************************************************/
+    //后退
     static Image[] afterImgs = new Image[9];
     static int afterCount;
     static {
@@ -207,9 +197,7 @@ public class BaShenAn implements Player {
     }
 
 
-    /************************************************************************
-     * 前进
-     ************************************************************************/
+    //前进
     static Image[] beforeImgs = new Image[9];
     static int beforeCount;
     static {
@@ -241,9 +229,7 @@ public class BaShenAn implements Player {
     }
 
 
-    /************************************************************************
-     * 挨揍
-     ************************************************************************/
+    //挨揍 
     static Image[] beatenImgs = new Image[4];
     static int beatenCount;
     static {
@@ -276,9 +262,7 @@ public class BaShenAn implements Player {
         }
     }
 
-    /************************************************************************
-     * 拳击
-     ************************************************************************/
+    // 拳击 
     static Image[] jImgs = new Image[4];
     static int jCount;
     static Image[] beforeJImgs = new Image[8];
@@ -360,9 +344,7 @@ public class BaShenAn implements Player {
     }
 
 
-    /************************************************************************
-     * 腿击
-     ************************************************************************/
+    //腿击 
     static Image[] kImgs = new Image[4];
     static int kCount;
     static Image[] afterKImgs = new Image[10];
@@ -454,9 +436,7 @@ public class BaShenAn implements Player {
     }
 
 
-    /************************************************************************
-     * 闪避
-     ************************************************************************/
+    //闪避 
     static Image[] lImgs1 = new Image[9];
     static Image[] lImgs2 = new Image[1];
     static int lCount1;
@@ -498,9 +478,7 @@ public class BaShenAn implements Player {
         }
     }
 
-    /************************************************************************
-     * 技能一
-     ************************************************************************/
+    // 技能一 
     static Image[] uImgs1 = new Image[18];
     static int uCount;
     static Image[] uImgs2 = new Image[18];
@@ -537,9 +515,7 @@ public class BaShenAn implements Player {
 
     }
 
-    /************************************************************************
-     * 技能二
-     ************************************************************************/
+    // 技能二 
     static Image[] iImgs = new Image[18];
     static int iCount;
     static {
@@ -566,9 +542,7 @@ public class BaShenAn implements Player {
         }
     }
 
-    /************************************************************************
-     * 被击飞
-     ************************************************************************/
+    //被击飞 
     static Image[] flyImgs = new Image[9];
     static int flyCount;
     static {

@@ -124,7 +124,7 @@ public class GameUtil {
                 null,null);
     }
     
-    //ko后重置键盘监听
+    //ko重置
     public void addDirection(KeyEvent e){
         if (e.getKeyCode() == KeyEvent.VK_ENTER){
             blood1 = blood2 = 100;

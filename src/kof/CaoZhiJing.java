@@ -18,9 +18,7 @@ public class CaoZhiJing implements Player{
         this.height = height;
     }
 
-    /************************************************************************
-     * 按下某个键，增加相应的方向
-     ************************************************************************/
+    //按下某个键，增加相应的方向
     public void addDirection(KeyEvent e){
         switch (e.getKeyCode()) {
             case 40:
@@ -57,9 +55,7 @@ public class CaoZhiJing implements Player{
     }
 
 
-    /************************************************************************
-     * 按下某个键，取消相应的方向
-     ************************************************************************/
+    //按下某个键，取消相应的方向
     public void minusDirection(KeyEvent  e){
         clean();
         switch (e.getKeyCode()) {
@@ -93,9 +89,7 @@ public class CaoZhiJing implements Player{
     }
 
 
-    /************************************************************************
-     * 站立
-     ************************************************************************/
+    //站立
     static Image[] standImgs = new Image[10];
     static int standCount;
     static {
@@ -120,9 +114,7 @@ public class CaoZhiJing implements Player{
         }
     }
 
-    /************************************************************************
-     * 下蹲
-     ************************************************************************/
+    //下蹲
     static Image downImgs;
     static int downCount;
     static Image[] downKImgs = new Image[9];
@@ -178,9 +170,7 @@ public class CaoZhiJing implements Player{
     }
 
 
-    /************************************************************************
-     * 后退
-     ************************************************************************/
+    //后退
     static Image[] afterImgs = new Image[11];
     static int afterCount;
     static {
@@ -204,9 +194,7 @@ public class CaoZhiJing implements Player{
     }
 
 
-    /************************************************************************
-     * 前进
-     ************************************************************************/
+    //前进
     static Image[] beforeImgs = new Image[11];
     static int beforeCount;
     static {
@@ -238,9 +226,7 @@ public class CaoZhiJing implements Player{
     }
 
 
-    /************************************************************************
-     * 挨揍
-     ************************************************************************/
+    //挨揍
     static Image[] beatenImgs = new Image[5];
     static int beatenCount;
     static {
@@ -273,9 +259,7 @@ public class CaoZhiJing implements Player{
         }
     }
 
-    /************************************************************************
-     * 拳击
-     ************************************************************************/
+    //拳击
     static Image[] jImgs = new Image[2];
     static int jCount;
     static Image[] beforeJImgs = new Image[6];
@@ -349,9 +333,7 @@ public class CaoZhiJing implements Player{
     }
 
 
-    /************************************************************************
-     * 腿击
-     ************************************************************************/
+    //腿击
     static Image[] kImgs = new Image[4];
     static int kCount;
     static Image[] afterKImgs = new Image[5];
@@ -449,9 +431,7 @@ public class CaoZhiJing implements Player{
     }
 
 
-    /************************************************************************
-     * 闪避
-     ************************************************************************/
+    //闪避
     static Image[] lImgs1 = new Image[6];
     static Image[] lImgs2 = new Image[6];
     static int lCount1;
@@ -494,9 +474,7 @@ public class CaoZhiJing implements Player{
         }
     }
 
-    /************************************************************************
-     * 技能一
-     ************************************************************************/
+    //技能一
     static Image[] uImgs1 = new Image[10];
     static int uCount;
     static Image[] uImgs2 = new Image[10];
@@ -531,9 +509,7 @@ public class CaoZhiJing implements Player{
 
     }
 
-    /************************************************************************
-     * 技能二
-     ************************************************************************/
+    //技能二
     static Image[] iImgs = new Image[17];
     static int iCount;
     static {
@@ -566,9 +542,7 @@ public class CaoZhiJing implements Player{
         }
     }
 
-    /************************************************************************
-     * 被击飞
-     ************************************************************************/
+    //被击飞
     static Image[] flyImgs = new Image[9];
     static int flyCount;
     static {
@@ -583,24 +557,19 @@ public class CaoZhiJing implements Player{
             flyCount=0;fly = false;stand(g);return;
         }
         if (flyCount == 0 || flyCount == 8 || flyCount == 5){
-            g.drawImage(flyImgs[flyCount],x, y+height/4, width+100,
-                    height*3/4,null,null);
+            g.drawImage(flyImgs[flyCount],x, y+height/4, width+100, height*3/4,null,null);
         }
         if (flyCount >= 1 && flyCount <= 3){
-            g.drawImage(flyImgs[flyCount],x, y+height/2+50, 2*width+50,
-                    height/2-50,null,null);
+            g.drawImage(flyImgs[flyCount],x, y+height/2+50, 2*width+50,  height/2-50,null,null);
         }
         if (flyCount == 4){
-            g.drawImage(flyImgs[flyCount],x, y+height/3, height*2/3+50,
-                    height*2/3,null,null);
+            g.drawImage(flyImgs[flyCount],x, y+height/3, height*2/3+50, height*2/3,null,null);
         }
         if (flyCount == 6){
-            g.drawImage(flyImgs[flyCount],x, y+height/3, width+50+50,
-                    height*2/3,null,null);
+            g.drawImage(flyImgs[flyCount],x, y+height/3, width+50+50, height*2/3,null,null);
         }
         if (flyCount == 7){
-            g.drawImage(flyImgs[flyCount],x, y-50, width,
-                    height+50,null,null);
+            g.drawImage(flyImgs[flyCount],x, y-50, width,height+50,null,null);
         }
         if(flyCount >= 0 && flyCount <= 3 && x<Constant.GAME_WIDTH-width-8*speed){
             x += 8*speed;

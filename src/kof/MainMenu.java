@@ -24,7 +24,6 @@ public class MainMenu extends JFrame {
     private static final String EMAIL = "2904562775@qq.com";
 
     private MainMenu() {
-    	printCopyright();
         System.out.println("菜单建立");
         setTitle("kof拳皇");
         setSize(Constant.GAME_WIDTH, Constant.GAME_HEIGHT);
@@ -44,6 +43,8 @@ public class MainMenu extends JFrame {
         add(backgroundPanel, BorderLayout.CENTER);
 
         addComponents(backgroundPanel);
+        
+        printCopyright(backgroundPanel);
 
         setVisible(true);
 
@@ -133,8 +134,16 @@ public class MainMenu extends JFrame {
             }
         });
     }
- // 版权信息打印方法
-    public void printCopyright() {
+ // 版权信息打印
+    public void printCopyright(JPanel backgroundPanel) {
+    	JButton b = new JButton("作者");
+    	b.setToolTipText("<html>" + YEAR + "年<br>" +
+                "作者：" + AUTHOR + "<br>" +
+                "邮箱：" + EMAIL + "<br>" +
+                "电话：" + TELEPHONE + "</html>");
+        b.setFont(new Font("微软雅黑", Font.PLAIN, 18));
+        b.setBounds(600, 540, 150, 50);
+    	backgroundPanel.add(b);
         System.out.println( YEAR + "年\n" + "作者：" + AUTHOR + "\n" + "邮箱：" + EMAIL + "\n" + "电话:" + TELEPHONE);
     }
 }

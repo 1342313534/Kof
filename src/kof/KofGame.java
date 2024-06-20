@@ -52,9 +52,9 @@ public class KofGame extends Frame {
         }
         // 优先级检查
         gameUtil.check(peng);
-        // 画八神庵
+        // 八神庵
         baShenAn.drawSelf(g,peng);
-        // 画草稚京
+        // 草稚京
         caoZhiJing.drawSelf(g,peng);
         // ko
         if (gameUtil.blood1 <= 0 || gameUtil.blood2 <= 0){
